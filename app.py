@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import joblib
 # 予測モデルの読み込み
-price = joblib.load('data/lunch3.pkl')
+price = joblib.load('/home/shintokun/lunch/data/lunch3.pkl')
 
 app = Flask(__name__)
 # Routing
