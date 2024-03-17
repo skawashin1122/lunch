@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Form ================================================== -->
+<div class="form">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+	    <div class="table table-bordered">
+		  <table class="table table-striped">
+		    <tr>
+          <th class="table-secondary"width="80"><div class="text-center">予測値</div></th>
+          <th class="table-secondary" colspan="4" width="500"><div class="text-center">弁当の販売数予測は、{{ yoso }}個です。</div></th>
+        </tr>
+        <tr>
+          <td width="120" align="center">天気：{{ x1 }}</td>
+          <td width="120" align="center">気温：{{ x2 }}℃</td>
+          <td width="120" align="center">{{ x3 }}</td>
+          <td width="120" align="center">特記事項：{{ x4 }}</td>
+			    <td width="100" class="text-center">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">確認</button>
+          </td>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">弁当販売数予測確認画面</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">次の弁当販売数を予測しますか？</div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">終 了</button>
+                  <button type="button" class="btn btn-danger" onclick="location.href='./'">再入力</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+			  </tr>
+		  </table>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
